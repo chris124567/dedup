@@ -103,7 +103,7 @@ class Deduplicator {
                                                                                             threshold_(threshold),
                                                                                             hasher_(num_hashes) {
         for (int c = 0; c <= numeric_limits<unsigned char>::max(); ++c) {
-            if (!isalnum(static_cast<unsigned char>(c))) {
+            if (!isalnum(c)) {
                 nonalnum_ += static_cast<char>(c);
             }
         }
